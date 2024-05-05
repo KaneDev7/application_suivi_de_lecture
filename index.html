@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Application de Suivi de Lecture</title>
+</head>
+
+<body class="">
+
+    <!-- modal -->
+
+    <section class="modal">
+        <div class="overlay"></div>
+
+        <div class="modal_container">
+            <h1>Ajouter un Livre</h1>
+            <form action="">
+                <div class="inputBox">
+                    <label for="">Titre</label>
+                    <input type="text" name="title" placeholder="Titre du livre">
+                </div>
+
+                <div class="inputBox">
+                    <label for="">Auteur</label>
+                    <input type="text" name="auteur" placeholder="Auteur du livre">
+                </div>
+
+                <button type="submit">Valider</button>
+            </form>
+        </div>
+        <span class="closeBtn material-icons">cancel</span>   
+                 
+    </section>
+    <header class="navBar">
+        <div class="navBar_container">
+            <div class="logo">
+                <h2>KEEP</h2>
+                <h2>READING</h2>
+            </div>
+            <div class="themeOption">
+                <span class="material-icons">light_mode</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="Infos">
+        <div class="infos_text">
+            <h1>Livres Lus</h1>
+            <p>Keep it up</p>
+        </div>
+
+        <div class="Infos_count">
+            <h1>0/0</h1>
+        </div>
+     
+    </section>
+
+    <section class="bookList_box">
+        <p class="defaulMessage">Votre biblithéque ne contient auccun livre veillez en <span class="fistAddBtn">ajouter</span></p>
+        <ul class="bookList">
+        </ul>
+    </section>
+
+    <span class="addBtn material-icons">add_circle</span>
+    
+
+    <script src="app.js"></script>
+</body>
+
+</html>
