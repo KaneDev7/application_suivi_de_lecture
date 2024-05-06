@@ -479,8 +479,11 @@ form button:hover {
     .item_text p {
         font-size: 12px;
     }
+    .modal_container {
+        margin-top: 50px;
+    } 
     .modal_container h1 {
-        margin-bottom: 100px;
+        margin-bottom: 30px;
         font-size: 30px;
     }
     .addBtn{
