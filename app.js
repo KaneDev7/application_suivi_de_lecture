@@ -8,7 +8,6 @@ const form = document.querySelector('form')
 const bookList = document.querySelector('.bookList')
 const Infos_count = document.querySelector('.Infos_count h1')
 const themeOption = document.querySelector('.themeOption')
-const icons = document.querySelectorAll('.material-icons')
 
 
 function setDataToLocalStorage(name, data) {
@@ -40,12 +39,6 @@ function patchDataFromLocalStorage(name, id) {
     localStorage.setItem(name, JSON.stringify(toggleIsRead))
 }
 
-// desactiver la traduction automatique le text des icons material-icons
-const  desableTranslateFormIncos = () => {
-    for (const icon of icons) {
-        icon.setAttribute('translate', 'no')
-    }
-}
 
 
 const showModal = () => {
@@ -151,7 +144,6 @@ const toggleTheme = () => {
 insertDataToDom()
 insertCountElement()
 setTheme()
-desableTranslateFormIncos()
 
 themeOption.addEventListener('click', toggleTheme)
 addBtn.addEventListener('click', showModal)
