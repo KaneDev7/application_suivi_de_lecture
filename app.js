@@ -44,10 +44,10 @@ const showModal = () => {
     modal.classList.add('visible')
 }
 
+
 const closeModal = () => {
     modal.classList.remove('visible')
 }
-
 
 
 const addBook = (event) => {
@@ -97,8 +97,10 @@ const insertDataToDom = () => {
 
 const insertCountElement = () => {
     const allBooks = getDataFromLocaleStorage('book')
-    const bookReads = allBooks.filter(book => book.isRead === true)
+    const bookReads = allBooks.filter(book => book.isRead === true)    
     Infos_count.innerText = `${bookReads.length}/${allBooks.length}`
+    Infos_count.classList.add('sacalAnim')
+    setTimeout(() =>{Infos_count.classList.remove('sacalAnim')}, 1000 )
 }
 
 

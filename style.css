@@ -1,16 +1,16 @@
-:root{
-    --primaryColor : #ff5631;
-    --secondaryColor : #CEBEA4;
-    --itemFondColor : #151313;
-    --inputColor : #222222;
+:root {
+    --primaryColor: #ff5631;
+    --secondaryColor: #CEBEA4;
+    --itemFondColor: #151313;
+    --inputColor: #222222;
 
-    --darkColor : #0d0d0d;
-    --lightColor : white;
-    --globalWidth : 1300px;
+    --darkColor: #0d0d0d;
+    --lightColor: white;
+    --globalWidth: 1300px;
 }
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,7 +20,7 @@
 
 
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,11 +30,11 @@ body{
     padding: 0 30px;
 }
 
-.darkTheme{
+.darkTheme {
     background: var(--darkColor);
 }
 
-.navBar{
+.navBar {
     width: 100%;
     padding: 30px;
     display: flex;
@@ -43,41 +43,42 @@ body{
 
 }
 
-.navBar_container{
+.navBar_container {
     max-width: var(--globalWidth);
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     display: flex;
 }
-.logo h2{
+
+.logo h2 {
     color: var(--darkColor);
     font-weight: bold;
 }
 
-.logo h2:last-child{
+.logo h2:last-child {
     color: var(--primaryColor);
 }
 
-.darkTheme .logo h2:first-child{
+.darkTheme .logo h2:first-child {
     color: var(--lightColor);
 }
 
-.themeOption{
+.themeOption {
     display: flex;
     gap: 20px;
     color: var(--darkColor);
 }
 
-.themeOption span{
+.themeOption span {
     cursor: pointer;
 }
 
 
-.darkTheme .themeOption{
+.darkTheme .themeOption {
     color: var(--lightColor);
 
 }
@@ -87,7 +88,7 @@ body{
 /* -------Infos---------- */
 
 
-.Infos{
+.Infos {
     margin-top: 100px;
     display: flex;
     align-items: center;
@@ -99,31 +100,32 @@ body{
     color: white;
 }
 
-.darkTheme .Infos{
+.darkTheme .Infos {
     border: solid 1px var(--secondaryColor);
 }
 
-.infos_text h1{
+.infos_text h1 {
     font-size: 25px;
     color: var(--darkColor);
     text-transform: uppercase;
 }
-.darkTheme .infos_text h1{
+
+.darkTheme .infos_text h1 {
     color: var(--secondaryColor);
 }
 
-.infos_text p{
+.infos_text p {
     color: var(--darkColor);
     margin-top: 5px;
     letter-spacing: 3px;
 }
 
-.darkTheme .infos_text p{
+.darkTheme .infos_text p {
     color: var(--secondaryColor);
 
 }
 
-.Infos_count{
+.Infos_count {
     width: 120px;
     height: 120px;
     padding: 10px;
@@ -134,48 +136,54 @@ body{
     background: var(--primaryColor);
     color: var(--lightColor);
 }
-.darkTheme .Infos_count{
+
+.darkTheme .Infos_count {
     color: var(--darkColor);
 
 }
 
 
-.Infos_count h1{
+.Infos_count h1 {
     font-size: 2rem;
     letter-spacing: 5px;
     font-weight: bolder;
+}
+
+.Infos_count .sacalAnim {
+    transition: .5s;
+    animation: scaleAnime .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 
 /* -------Book list---------- */
 
 
-.bookList_box{
+.bookList_box {
     margin: 100px 0;
     max-width: 600px;
     width: 100%;
 }
 
-.defaulMessage{
+.defaulMessage {
     color: var(--darkColor);
     opacity: .7;
     text-align: center;
 }
 
-.darkTheme .defaulMessage{
+.darkTheme .defaulMessage {
     color: var(--secondaryColor);
 }
 
-.defaulMessageHidden{
+.defaulMessageHidden {
     display: none;
 }
 
-.fistAddBtn{
+.fistAddBtn {
     color: var(--primaryColor);
     cursor: pointer;
 }
 
-.bookList{
+.bookList {
     /* max-height: 400px; */
     /* overflow-y: auto; */
     width: 100%;
@@ -199,74 +207,98 @@ body{
     background: var(--primaryColor);
 
 } */
-.bookList_item{
+.bookList_item {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background:white;
+    background: white;
     border-radius: 8px;
+    border: solid 1px transparent;
 }
 
-.darkTheme .bookList_item{
+.darkTheme .bookList_item {
     background: var(--itemFondColor);
+
 }
 
-.booklist_item_left{
+.booklist_item_left {
     display: flex;
     align-items: center;
     gap: 20px;
     color: var(--darkColor);
 }
-.darkTheme .booklist_item_left{
+
+.booklist_item_option {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+.darkTheme .booklist_item_left {
     color: #efefef;
 }
 
-.item_text h2{
+.item_text h2 {
     font-size: 18px;
     text-transform: capitalize;
 }
 
-.check .item_text h2{
-    text-decoration:line-through ;
+.check .item_text h2 {
+    text-decoration: line-through;
     opacity: .7;
 }
 
-.check .item_text p{
-    text-decoration:line-through ;
+.check .item_text p {
+    text-decoration: line-through;
 }
 
-.item_text p{
+.check {
+    border: solid 1px #00000058;
+    transition: 1s;
+    opacity: .7;
+}
+
+.darkTheme .check {
+    border: solid 1px #ff57313c;
+    transition: 1s;
+}
+
+
+
+
+.item_text p {
     font-size: 13px;
     margin-top: 5px;
     opacity: .7;
 }
 
-.darkTheme .item_text p{
+.darkTheme .item_text p {
     color: var(--secondaryColor);
 
 }
 
-.deleteBtn{
+.deleteBtn {
     color: var(--primaryColor);
     cursor: pointer;
 }
-.checkBtn{
+
+.checkBtn {
     color: var(--darkColor);
     cursor: pointer;
 }
 
-.darkTheme .checkBtn{
+.darkTheme .checkBtn {
     color: var(--secondaryColor);
 
 }
 
 
 
-.addBtn{
+.addBtn {
     position: fixed;
-    bottom: 60px;
+    bottom: 10px;
     right: 10px;
     cursor: pointer;
     color: var(--primaryColor);
@@ -274,15 +306,15 @@ body{
     opacity: .8;
 }
 
-.addBtn:hover{
+.addBtn:hover {
     opacity: 1;
 }
 
 /* ------modal------ */
 
-.modal{
+.modal {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
     opacity: 0;
     pointer-events: none;
@@ -296,26 +328,27 @@ body{
     transition: .3s;
 }
 
-.darkTheme .modal{
+.darkTheme .modal {
     background: #000000f4;
 }
 
-.visible{
+.visible {
     opacity: 1;
     pointer-events: painted;
 }
-.overlay{
+
+.overlay {
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: -1;
 }
 
-.modal_container{
+.modal_container {
     margin-top: 200px;
 }
 
-.modal_container h1{
+.modal_container h1 {
     font-size: 40px;
     text-align: center;
     color: var(--primaryColor);
@@ -323,26 +356,27 @@ body{
     font-weight: lighter;
 }
 
-.modal_container form{
+.modal_container form {
     min-width: 350px;
 }
 
-.inputBox{
+.inputBox {
     width: 100%;
     color: #ffffffe9;
     margin-bottom: 35px;
 }
+
 .inputBox label {
     display: block;
     margin-bottom: 5px;
     color: var(--darkColor);
 }
 
-.darkTheme .inputBox label{
+.darkTheme .inputBox label {
     color: #dededee9;
 }
 
-.inputBox input{
+.inputBox input {
     width: 100%;
     outline: none;
     border: none;
@@ -353,23 +387,23 @@ body{
     color: var(--darkColor);
 }
 
-.darkTheme .inputBox input{
+.darkTheme .inputBox input {
     background: var(--inputColor);
     color: white;
 }
 
-.inputBox input::placeholder{
+.inputBox input::placeholder {
     opacity: 1;
 }
 
-.darkTheme .inputBox input::placeholder{
+.darkTheme .inputBox input::placeholder {
     opacity: .5;
 }
 
 
 
 
-form button{
+form button {
     width: 100%;
     padding: 10px 20px;
     border: none;
@@ -381,19 +415,76 @@ form button{
     opacity: .8;
 }
 
-.darkTheme form button{
+.darkTheme form button {
     color: var(--darkColor);
 }
 
-form button:hover{
+form button:hover {
     opacity: 1;
 }
 
-.closeBtn{
+.closeBtn {
     position: absolute;
-    right: 50px;
+    right: 10px;
     top: 50px;
     color: var(--primaryColor);
     font-size: 40px;
     cursor: pointer;
+}
+
+
+@keyframes scaleAnime {
+    from {
+        opacity: .2;
+        transform: scale(.1);
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .navBar{
+        padding: 30px 5px;
+    }
+    .Infos {
+        padding: 40px 40px;
+    }
+
+    .infos_text h1 {
+        font-size: 15px;
+    }
+
+    .Infos_count {
+        width: 90px;
+        height: 90px;
+    }
+
+    .Infos_count h1 {
+        font-size: 25px;
+    }
+
+    .item_text h2 {
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+
+    .bookList_item {
+        padding: 10px 15px;
+    }
+
+    .item_text p {
+        font-size: 12px;
+    }
+    .modal_container h1 {
+        margin-bottom: 100px;
+        font-size: 30px;
+    }
+    .addBtn{
+        bottom: 5px;
+        right: 5px;
+    }
 }
